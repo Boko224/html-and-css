@@ -1,0 +1,80 @@
+
+body {
+    background-color: #0a192f; /* Тъмно син фон */
+    color: #f4a261; /* Златист текст */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid white;
+    background-color: #112240; /* По-светъл син за контраст */
+}
+
+
+.menu-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1e3a5f; /* По-светло синьо */
+    min-width: 150px;
+    border: 1px solid white;
+    z-index: 1;
+    left: -77px; /* Премества менюто наляво */
+
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+
+}
+
+.dropdown-content a:hover {
+    background-color: gray;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #112240;
+}
