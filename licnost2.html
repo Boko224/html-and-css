@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Алберт Айнщайн</title>
+</head>
+<body>
+    <h1> Алберт Айнщайн</h1>
+    <img src="image/image.png" alt="Алберт Айнщайн" width="500" height="600">
+    <h2>Биография</h2>
+    <div class="flex-container">
+    <div>
+    <p>
+        Алберт Айнщайн е роден на 14 март 1879 г. в град Улм в Кралство Вюртемберг, част от Германската империя.Баща му, Херман Айнщайн (1847 – 1902 г.), е съдружник в магазин за дюшеци, а майка му, Паулине Айнщайн (1858 -1920 г.), е дъщеря на заможен търговец на зърно. През 1880 г. семейството се премества в Мюнхен, където Херман Айнщайн основава с брат си Якоб предприятие за производство на постояннотокови електрически уреди.
+    </p>
+        <h3>Научна дейност</h3>
+        <p>
+            В Съединените щати постъпва във факултета на новооснования Институт за фундаментални изследвания в Принстън, Ню Джърси, където остава до края на живота си. Неговите научни интереси са създаването на единна теория на полето и релативистката космология. През 1940 г. получава американско гражданство, но запазва и швейцарското. Не участва в проекта Манхатън в Лос Аламос, а за атомните бомби над Хирошима и Нагазаки научава от вестниците.
+        </p>
+
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="image/albert-einstein-sticks-out-his-tongue-when-asked-by-news-photo-1681316749.jpg" alt="Айнщайн 1">
+            </div>
+            <div class="slide fade">
+                <img src="image/672de4205a2309001e098f8d.jpg" alt="Айнщайн 2">
+            </div>
+            <div class="slide fade">
+                <img src="image/image.png" alt="Айнщайн 3">
+            </div>
+        
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                let slides = document.getElementsByClassName("slide");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1; }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000); // Променя снимките на всеки 3 секунди
+            }
+            
+            function changeSlide(n) {
+                let slides = document.getElementsByClassName("slide");
+                slideIndex += n;
+                if (slideIndex > slides.length) { slideIndex = 1; }
+                if (slideIndex < 1) { slideIndex = slides.length; }
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+            </script>
+
+        <button onclick="window.location.href='home.html'" class="animated-button">Home</button>
+    <footer>
+        © 2025 Практикум | ФКСТ/КСИ
+    </footer>
+</div>
+</div>
+</body>
+</html>

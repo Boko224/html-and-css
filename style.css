@@ -1,5 +1,10 @@
 body {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #4f4958;
     text-align: center;
 }
@@ -37,3 +42,110 @@ img {
     max-width: 600px;
     text-align: left;
 }
+.map-container div{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.socialni a {
+    font-size: 20px; /* Големина на текста */
+    color: rgb(31, 31, 60); /* Цвят на линковете */
+    text-decoration: none; /* Премахва подчертаването */
+    font-weight: bold; /* Удебелен текст */
+    padding: 10px; /* Разстояние около текста */
+    display: inline-block; /* Позволява да се прилага padding */
+}
+
+.socialni a:hover {
+   
+    color: rgb(113, 22, 22); /* Промяна на цвета при ховър */
+}
+
+
+
+p{
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    color: #333;
+}
+
+.animated-button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.animated-button:active {
+    transform: scale(0.95);
+}
+.people-section {
+    grid-template-columns: repeat(2, 1fr); /* Две колони за личностите */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* По три бутона в ред за менюто */
+    gap: 15px;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Опенхаймер</title>
 </head>
 <body>
     <h1> Робърт Опенхаймер</h1>
-    <img src="JROppenheimer-LosAlamos.jpg" alt="Робърт Опенхаймер" width="500" height="600">
+    <img src="image/JROppenheimer-LosAlamos.jpg" alt="Робърт Опенхаймер" width="500" height="600">
     <h2>Биография</h2>
     <div class="flex-container">
     <div>
@@ -16,6 +16,52 @@
     <h3>Научна дейност</h3>
     <p>На 9 октомври 1941 г., преди САЩ да влязат във Втората световна война, президентът Рузвелт одобрява ускорена програма за създаване на ядрено оръжие. През 1942 г. Джеймс Б. Конант предлага на Опенхаймер да оглави изследванията върху бързите неутрони в Бъркли. Опенхаймер организира лятно училище за обучение на учените по теорията на атомната бомба. Осъзнавайки нуждата от секретна лаборатория, той избира място в Ню Мексико, където се изгражда Националната лаборатория в Лос Аламос. Там събира водещи физици като Енрико Ферми, Ричард Файнман и Робърт Уилсън. На 25 ноември 1942 г. е назначен за директор на лабораторията. Първият ядрен тест „Тринити“ е проведен на 16 юли 1945 г. в Ню Мексико, с експлозия, равняваща се на 20 килотона ТНТ. Гледайки експлозията, Опенхаймер цитира Бхагавад гита: „Сега аз съм станал Смъртта, унищожителят на световете.“</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/uYPbbksJxIg?si=aJHjQQ9Lk0MYiQrB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="image/JROppenheimer-LosAlamos.jpg" alt="Опенхаймер 1">
+        </div>
+        <div class="slide fade">
+            <img src="image/image copy.png" alt="Опенхаймер 2">
+        </div>
+        <div class="slide fade">
+            <img src="image/image copy 2.png" alt="Опенхаймер 3">
+        </div>
+    
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Променя снимките на всеки 3 секунди
+        }
+        
+        function changeSlide(n) {
+            let slides = document.getElementsByClassName("slide");
+            slideIndex += n;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        </script>
+    <button onclick="window.location.href='home.html'" class="animated-button">Home</button>
+    
+        
+    <footer>
+        © 2025 Практикум | ФКСТ/КСИ
+    </footer>
 </div>
 </div>
 </body>
